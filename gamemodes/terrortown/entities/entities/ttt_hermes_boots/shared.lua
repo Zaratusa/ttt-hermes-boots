@@ -5,7 +5,7 @@ CreateConVar("ttt_hermesboots_detective", 1, {FCVAR_SERVER_CAN_EXECUTE, FCVAR_AR
 CreateConVar("ttt_hermesboots_traitor", 1, {FCVAR_SERVER_CAN_EXECUTE, FCVAR_ARCHIVE, FCVAR_REPLICATED}, "Should Traitors be able to buy the Hermes Boots?", 0, 1)
 local speed = CreateConVar("ttt_hermesboots_speed", 1.3, {FCVAR_SERVER_CAN_EXECUTE, FCVAR_ARCHIVE, FCVAR_REPLICATED}, "The speed multiplier for the Hermes Boots.")
 
-EQUIP_HERMES_BOOTS = GenerateNewEquipmentID()
+EQUIP_HERMES_BOOTS = (GenerateNewEquipmentID and GenerateNewEquipmentID()) or 32
 
 local perk = {
 	id = EQUIP_HERMES_BOOTS,
