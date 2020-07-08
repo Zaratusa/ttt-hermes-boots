@@ -32,7 +32,7 @@ end
 
 --[[Perk logic]]--
 hook.Add("TTTPlayerSpeedModifier", "TTTHermesBoots", function(ply)
-	if (IsValid(ply) and ent:Alive() and ent:IsTerror() and ply:HasEquipmentItem(EQUIP_HERMES_BOOTS)) then
+	if (IsValid(ply) and ply:Alive() and ply:IsTerror() and ply:HasEquipmentItem(EQUIP_HERMES_BOOTS)) then
 		-- ply.mult is for compatibility with TTT Sprint (ID: 933056549)
 		if (EQUIP_JUGGERNAUT_SUIT and ply:HasEquipmentItem(EQUIP_JUGGERNAUT_SUIT)) then
 			return (ply.mult or 1) * speed:GetFloat() * GetConVar("ttt_juggernautsuit_speed"):GetFloat() -- multiply with the speed of the Juggernaut Suit
